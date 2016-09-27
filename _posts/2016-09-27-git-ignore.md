@@ -1,3 +1,7 @@
+---
+layout: default
+title: 你好，世界
+---
 # Git全局禁止.DS\_Store
 在Mac上使用Git遇到一个烦人的问题：git文件夹内充满了 macOS 的隐藏文件，.DS\_Store、.Trash......
 每次删除这些文件再进行 git commit 烦人的很啊。 google了一篇文章：[让 Git 全局性的忽略 .DS\_Store]可以解决这个问题。
