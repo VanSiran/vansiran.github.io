@@ -1,77 +1,11 @@
 ---
-layout: default
-title: Blogging Like a Hacker
+layout: index
+title: 求知之路 | Van Siran
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>求知之路 by VanSiran</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="https://github.com/VanSiran">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>求知之路</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <div id="no-downloads">
-        <span class="inner">
-        </span>
-      </div>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h3>
+<h3>
 <a id="记录我的技术思考点点滴滴" class="anchor" href="#%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83%E7%82%B9%E7%82%B9%E6%BB%B4%E6%BB%B4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>记录我的技术思考点点滴滴</h3>
-      <ul>
-      {% for post in site.posts %}
-          <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>Projects by <a href="https://github.com/VanSiran">VanSiran</a> can be found on <a href="https://github.com/VanSiran">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-    
-  </body>
-</html>
+<ul>
+{% for post in site.posts %}
+    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
