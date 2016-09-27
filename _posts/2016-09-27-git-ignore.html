@@ -1,0 +1,38 @@
+---
+layout: default
+title: Git全局禁止.DS_Store
+---
+<h1>Git全局禁止.DS_Store</h1>
+
+<p>在Mac上使用Git遇到一个烦人的问题：git文件夹内充满了 macOS 的隐藏文件，.DS_Store、.Trash......</p>
+
+<p>每次删除这些文件再进行 git commit 烦人的很啊。<br/>google了一篇文章：<a href="http://www.mednoter.com/gitignore-global.html">让 Git 全局性的忽略 .DS_Store</a>可以解决这个问题。</p>
+
+<h2>第一步</h2>
+
+<blockquote>
+<p>创建 ~/.gitignore_global 文件，把需要全局忽略的文件类型塞到这个文件里。</p>
+</blockquote>
+
+<pre><code>.DS_Store .DS_Store? *.swp ._* .Spotlight-V100 .Trashes Icon? ehthumbs.db Thumbs.db
+</code></pre>
+
+<p></p>
+
+<h2>第二步</h2>
+
+<p>然而。发现我的~/下面并没有.gitconfig配置文件......</p>
+
+<p>我的gitconfig在哪里呢？其实我并没有进行过全局设置，也自然就没有gitconfig文件了。直接在~/下创建一个.gitconfig文件就好了，在里面写进这个：</p>
+
+<pre><code>[core]
+	excludesfile = /Users/van/.gitignore_global
+</code></pre>
+
+<p>其实可以另辟蹊径，通过命令行 <code>git config --global core.excludesfile /Users/van/.gitignore\_global</code> 命令来实现。</p>
+
+<p>命令行写入后，ls -al ~发现已经创建了一个.gitconfig。内容和上面自己写进去的一样。</p>
+
+<hr />
+
+<p>gitconfig详细参考资料：<a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration</a></p>
